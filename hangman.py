@@ -1,4 +1,5 @@
 import random
+
 HANGMANPICS = ['''
   +---+
   |   |
@@ -80,6 +81,8 @@ while limbs_drawn < 6 and guessed == False:
 	if '_' not in display:
 		guessed = True
 if limbs_drawn == 6:
-	print '\nThe dude was shot to death a day before his scheduled execution. You failed both him and his memory.'
+	print '\033[1;31;40m *BANG*'
+	print HANGMANPICS[limbs_drawn]
+	print '\033[0;37;40m The dude was shot to death just one short moment before his scheduled hanging. You failed both him and his memory.'
 if guessed == True:
 	print "\nSad. No death today."
